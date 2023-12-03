@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var leftDice = 5;
+
     return Center(
       child: Row(
         children: [
@@ -13,7 +15,7 @@ class DicePage extends StatelessWidget {
                 onPressed: () {
                   print('left');
                 },
-                child: Image.asset('images/dice1.png'),
+                child: Image.asset('images/dice$leftDice.png'),
               ),
             ),
           ),
