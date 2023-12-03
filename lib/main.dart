@@ -1,24 +1,28 @@
+import 'package:dicee/dicee_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   return runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.red,
-        appBar: AppBar(
-          title: Text('Dicee'),
-          backgroundColor: Colors.red,
-        ),
-        body: DicePage(),
-      ),
-    ),
+    const DiceeApp(),
   );
 }
 
-class DicePage extends StatelessWidget {
+class DiceeApp extends StatelessWidget {
+  const DiceeApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.indigoAccent,
+        appBar: AppBar(
+          centerTitle: true,
+          title: const Text('Dicee'),
+          backgroundColor: Colors.indigo,
+        ),
+        body: DicePage(),
+      ),
+    );
   }
 }
